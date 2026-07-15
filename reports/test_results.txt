@@ -1,0 +1,10 @@
+Accuracy: 0.767
+
+              precision    recall  f1-score   support
+
+      animal       0.77      0.77      0.77        30
+       fruit       0.77      0.77      0.77        30
+
+    accuracy                           0.77        60
+   macro avg       0.77      0.77      0.77        60
+weighted avg       0.77      0.77      0.77        60

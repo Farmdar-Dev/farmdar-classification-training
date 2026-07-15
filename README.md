@@ -7,12 +7,12 @@ This is a one-day Python project for young interns. The goal is to build a progr
 
 The project includes:
 
-- 150 fruit images and 150 animal images in `data/images`
-- 4 separate demo images in `data/demo_inputs`
+- A generated sample image dataset in `data/images`
+- Demo images in `data/demo_inputs`
 - A completed trained implementation in `src`
 - Student starter files in `starter`
 - Teacher and student notes in `docs`
-- A saved trained model at `models/fruit_animal_classifier.joblib`
+- A Jupyter walkthrough for Microsoft Visual Studio Code
 
 ## Setup For VS Code And Jupyter
 
@@ -53,18 +53,18 @@ Then run the notebook cells from top to bottom.
 
 ## Script Quick Start
 
-You can also run these commands from this folder:
+Run these commands from this folder:
+
+```bash
+python src/run_everything.py
+```
+
+Or, if the dataset/model already exist:
 
 ```bash
 python src/train_model.py
 python src/predict.py data/demo_inputs/demo_fruit_1.jpg
 python src/predict.py data/demo_inputs/demo_animal_1.jpg
-```
-
-To rebuild everything from scratch:
-
-```bash
-python src/run_everything.py
 ```
 
 ## Project Structure
@@ -84,12 +84,12 @@ scripts/                  environment setup scripts
 
 ## Current Result
 
-The completed implementation trains on 80% of the 300-image dataset and tests on the remaining 20%.
+The completed implementation trains on 80% of the image dataset and tests on the remaining 20%.
 
-Current saved run:
+The default build collects:
 
-- Training images: 240
-- Testing images: 60
-- Accuracy: 76.7%
+- 150 fruit images
+- 150 animal images
+- 4 demo images outside the training folder
 
-This is intentionally not presented as magic. The model is good enough for a one-day lesson, and the remaining mistakes are useful for discussion about data quality, noisy labels, and why real AI systems need stronger datasets and models.
+The model is intentionally not presented as magic. It is good enough for a one-day lesson, and the remaining mistakes are useful for discussion about data quality, noisy labels, and why real AI systems need stronger datasets and models.
