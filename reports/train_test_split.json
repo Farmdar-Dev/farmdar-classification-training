@@ -8,6 +8,7 @@
   "test_size": 0.2,
   "random_state": 7,
   "model_random_state": 0,
+  "n_estimators": 500,
   "train_files": [
     "data/images/animal/animal_082_lion.jpg",
     "data/images/fruit/fruit_017_grapes.jpg",

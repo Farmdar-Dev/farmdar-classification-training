@@ -12,7 +12,7 @@ The project includes:
 - A completed trained implementation in `src`
 - Student starter files in `starter`
 - Teacher and student notes in `docs`
-- A Jupyter walkthrough for Microsoft Visual Studio Code
+- A guided Jupyter walkthrough for Microsoft Visual Studio Code with diagrams, charts, diagnostics, and visible prediction outputs
 
 ## Setup For VS Code And Jupyter
 
@@ -50,6 +50,11 @@ Python (Farmdar Classification Training)
 ```
 
 Then run the notebook cells from top to bottom.
+
+The notebook is the recommended classroom entry point. It explains each stage,
+shows sample images, plots dataset diagnostics, visualises the train/test split,
+shows how image features are converted into numbers, evaluates the model, and
+displays each unknown input image beside its prediction scores.
 
 ## Script Quick Start
 

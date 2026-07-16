@@ -48,6 +48,12 @@ def main():
     parser.add_argument("--test-size", type=float, default=0.2)
     parser.add_argument("--random-state", type=int, default=7)
     parser.add_argument("--model-random-state", type=int, default=0)
+    parser.add_argument(
+        "--n-estimators",
+        type=int,
+        default=500,
+        help="Number of decision trees in the random forest.",
+    )
     args = parser.parse_args()
 
     report_dir = Path(args.report_dir)
@@ -73,7 +79,7 @@ def main():
     x_test = make_feature_matrix(test_paths)
 
     model = RandomForestClassifier(
-        n_estimators=500,
+        n_estimators=args.n_estimators,
         random_state=args.model_random_state,
         class_weight="balanced",
     )
@@ -92,6 +98,9 @@ def main():
         "class_names": class_names,
         "image_size": IMAGE_SIZE,
         "feature_version": 1,
+        "n_estimators": args.n_estimators,
+        "test_size": args.test_size,
+        "random_state": args.random_state,
     }
     joblib.dump(package, args.model_path)
 
@@ -102,6 +111,7 @@ def main():
         "test_size": args.test_size,
         "random_state": args.random_state,
         "model_random_state": args.model_random_state,
+        "n_estimators": args.n_estimators,
         "train_files": [str(path) for path in train_paths],
         "test_files": [str(path) for path in test_paths],
     }
